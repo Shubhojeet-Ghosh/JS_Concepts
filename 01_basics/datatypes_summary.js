@@ -16,10 +16,10 @@ let userEmail;
 const id = Symbol("123");
 const anotherId = Symbol("123");
 
-console.log(id === anotherId);
+// console.log(id === anotherId);
 
 const bigNumber = 321654987654352165465487987n;
-console.log(bigNumber);
+// console.log(bigNumber);
 
 // Reference Type(Non Primitive)
 // Array, Objects, Functions
@@ -35,4 +35,24 @@ const myFunc = function () {
   console.log("Hello World...");
 };
 
-console.log(typeof outsideTemp);
+// console.log(typeof outsideTemp);
+
+// *******************************************
+// Stack(for Primitive by value), Heap(for Non-Primitive by reference)
+
+let myName = "Shubh";
+
+let anotherName = myName;
+anotherName = "Ghosh";
+
+// console.log(anotherName, myName); // creates a copy so the original value is not changed
+
+let user1 = {
+  email: "user1@google.com",
+  uppo: "user1@ybl",
+};
+
+let user2 = user1;
+user2.email = "user2@google.com";
+
+console.log(user1, user2);
